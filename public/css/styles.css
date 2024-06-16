@@ -1,6 +1,71 @@
+:root {
+  --primary-color: #3498db;   /* A strong blue */
+  --background-color: #ecf0f1;/* A light gray */
+  --text-color: #2c3e50;      /* A dark gray */
+  --header-background: #333;  /* Dark gray for headers */
+}
+
 /******* Change Box Model ***************/
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+#top-header{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+#top-header a{
+  text-decoration: none;
+}
+
+.nav-menu{
+  color: var(--background-color);
+  background-color: var(--header-background);
+}
+
+.nav-menu ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.nav-menu ul li{
+  list-style: none;
+}
+
+.main-container{
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("/images/site/checkerboard.jpg");
+    background-size:auto; 
+    background-repeat: repeat;
+  }
+
+  .main-container{
+    max-width: 90vw;
+    margin: 8vh auto;
+    border: solid var(--primary-color) 10px;
+    border-radius: 5px;
+    padding: 3rem 1rem;
+  }
 }
