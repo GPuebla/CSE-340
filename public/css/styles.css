@@ -3,6 +3,11 @@
   --background-color: #ecf0f1;/* A light gray */
   --text-color: #2c3e50;      /* A dark gray */
   --header-background: #333;  /* Dark gray for headers */
+
+  --font-1: 'Roboto', sans-serif;
+  --font-2: 'Trebuchet MS', sans-serif;
+
+  --test-border: solid red 2px;
 }
 
 /******* Change Box Model ***************/
@@ -12,7 +17,25 @@
   box-sizing: border-box;
 }
 
+h1,h2,h3, .siteName a{
+  font-family: var(--font-1);
+  font-weight: 700;
+  color: var(--text-color);
+}
 
+.siteName {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.siteName a {
+  font-size: 2em;
+}
+
+#tools a{
+  color: var(--header-background);
+  font-family: var(--font-1);
+}
 
 body{
   padding: 0;
@@ -23,6 +46,7 @@ body{
   display: flex;
   justify-content: space-between;
   padding: .5rem;
+  cursor: pointer;
 }
 
 #top-header a{
@@ -37,14 +61,19 @@ body{
 .nav-menu ul{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   text-align: center;
-  padding: 10px 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-menu ul li{
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav-menu ul li, a{
   list-style: none;
 }
 
@@ -52,6 +81,70 @@ body{
   background-color: #ffffff;
   max-width: 600px;
   margin: 0;
+}
+
+.hero-section{
+  position: relative;
+  margin-left: .3rem;
+}
+
+.hero-section h2{
+ font-size: 1.2em;
+}
+
+.hero-section img{
+  margin-left: 10%;
+  width: 90%;
+  object-fit:scale-down;
+}
+
+.hero-section span{
+  position: absolute;
+  top:40px;
+  left:20px;
+  width: 135px;
+  height: 112px;
+  z-index: 2;
+}
+
+.hero-section span h3{
+  position: relative;
+  margin:0;
+  color: var(--primary-color);
+}
+
+.hero-section span ul{
+  padding:0;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.hero-section span ul li{
+  list-style: none;
+  text-decoration: none;
+  margin-top: .15rem;
+  font-family: var(--font-1);
+  font-weight: 500;
+}
+
+.hero-section span button{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: .3rem .2rem;
+  margin-top: .3rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+ #overlay{
+  position: absolute;
+  background-color: var(--background-color);
+  opacity: .5;
+  top:40px;
+  left:20px;
+  width: 135px;
+  height: 116px;
+  border-radius: 4px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -66,6 +159,23 @@ body{
     margin: 8vh auto;
     border: solid var(--primary-color) 10px;
     border-radius: 5px;
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .siteName {
+    cursor: pointer;
+  }
+
+  .nav-menu ul li{
+    cursor: pointer;
+  }
+
+  .nav-menu ul li:hover{
+    background-color: var(--primary-color);
+    color: var(--header-background);
+  }
+
+  main{
+    margin: 0 1rem;
   }
 }
