@@ -38,6 +38,7 @@ h1,h2,h3, .siteName a{
 }
 
 body{
+  min-width: 375px;
   padding: 0;
   margin: 0;
 }
@@ -122,7 +123,8 @@ body{
 .hero-section span ul li{
   list-style: none;
   text-decoration: none;
-  margin-top: .15rem;
+  margin: 0;
+  margin-top: .2rem;
   font-family: var(--font-1);
   font-weight: 500;
 }
@@ -143,12 +145,14 @@ body{
   top:40px;
   left:20px;
   width: 135px;
-  height: 116px;
+  height: 125px;
   border-radius: 4px;
 }
 
-main{
+.main-section{
   margin-left: .3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 main h3{
@@ -167,6 +171,27 @@ main section ul li{
 main section .upgrade-container{
   display: flex;
   flex-wrap: wrap;
+
+}
+
+main section .upgrade-container .upgrade-card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: .4rem;
+}
+
+main section .upgrade-container .upgrade-card div{
+  background-color: var(--primary-color);
+  border: solid 1px var(--header-background);
+  width: 150px;
+  height: 80px;
+  margin: 0 auto;
+  padding: .5rem 0;
+}
+
+footer{
+  margin-left: .3rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -197,7 +222,10 @@ main section .upgrade-container{
     color: var(--header-background);
   }
 
-  main{
-    margin: 0 1rem;
+  .main-section{
+    margin-left: .3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:none;
   }
 }
