@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #3498db;   /* A strong blue */
-  --background-color: #ecf0f1;/* A light gray */
-  --text-color: #2c3e50;      /* A dark gray */
-  --header-background: #333;  /* Dark gray for headers */
+  --primary-color: #3498db;  
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;      
+  --header-background: #333;  
 
   --font-1: 'Roboto', sans-serif;
   --font-2: 'Trebuchet MS', sans-serif;
@@ -145,6 +145,28 @@ body{
   width: 135px;
   height: 116px;
   border-radius: 4px;
+}
+
+main{
+  margin-left: .3rem;
+}
+
+main h3{
+  margin: .5rem 0;
+}
+
+main section ul{
+  padding: .5rem 1rem;
+  margin: 0;
+}
+
+main section ul li{
+  margin-bottom: 1rem;
+}
+
+main section .upgrade-container{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 600px) {
