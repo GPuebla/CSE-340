@@ -150,41 +150,49 @@ body{
 }
 
 .main-section{
+  width: 100%;
   margin-left: .3rem;
   display: grid;
-  grid-template-rows: 1fr 1fr;
 }
 
-main h3{
+.main-section section{
+  margin: 0;
+  padding: 0;
+  max-width: 370px;
+}
+
+.main-section h3{
   margin: .5rem 0;
 }
 
-main section ul{
+.main-section section ul{
   padding: .5rem 1rem;
   margin: 0;
 }
 
-main section ul li{
-  margin-bottom: 1rem;
+.main-section section ul li{
+  margin-bottom: 1.4rem;
 }
 
-main section .upgrade-container{
+.main-section section .upgrade-container{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-
+  justify-content:space-around;
 }
 
-main section .upgrade-container .upgrade-card{
+.main-section section .upgrade-container .upgrade-card{
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: .4rem;
+  margin: .6rem .4rem;
 }
 
-main section .upgrade-container .upgrade-card div{
+.main-section section .upgrade-container .upgrade-card div{
   background-color: var(--primary-color);
   border: solid 1px var(--header-background);
-  width: 150px;
+  max-width: 170px;
+  min-width: 120px;
   height: 80px;
   margin: 0 auto;
   padding: .5rem 0;
@@ -196,17 +204,8 @@ footer{
 
 @media only screen and (min-width: 600px) {
   body {
-    background-image: url("/images/site/checkerboard.jpg");
-    background-size:auto; 
-    background-repeat: repeat;
-  }
-
-  .main-container{
-    max-width: 90vw;
-    margin: 8vh auto;
-    border: solid var(--primary-color) 10px;
-    border-radius: 5px;
-    padding: 1rem 1rem;
+    background-image: url("/images/site/small_check.jpg");
+    background-size: cover;
   }
 
   .siteName {
@@ -222,10 +221,65 @@ footer{
     color: var(--header-background);
   }
 
+  p,li,a{
+    font-size: 1.2em;
+  }
+
+  .main-container{
+    max-width: 900px;
+    margin: .4rem auto;
+    border: solid var(--primary-color) 10px;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+  }
+
+  .main-container h2{
+    font-size: 2.3em;
+  }
+
+  .hero-section span{
+    top:20%;
+    left:10%;
+    width:25%;
+    height:40%;
+  }
+
+  .hero-section span h3{
+    font-size: 1.8em;
+  }
+
+  .hero-section span ul li{
+    font-size: 1.5em;
+  }
+
+  .hero-section span button{
+    font-size: 1.5em;
+  }
+
+  #overlay{
+    top:20%;
+    left:10%;
+    width:25%;
+    height:40%;
+  }
+
   .main-section{
-    margin-left: .3rem;
-    display: grid;
+    min-width: 440px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:none;
+    grid-template-rows: 270px;
+  }
+
+  .main-section section{
+    
+  }
+
+  .main-section #reviews {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .main-section #upgrades{
+    grid-column: 1;
+    grid-row: 1;
   }
 }
