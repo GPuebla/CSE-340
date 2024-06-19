@@ -89,7 +89,7 @@ body{
   margin-left: .3rem;
 }
 
-.hero-section h2{
+.hero-section h1{
  font-size: 1.2em;
 }
 
@@ -99,43 +99,47 @@ body{
   object-fit:scale-down;
 }
 
-.hero-section span{
+.hero-section #span-text{
   position: absolute;
   top:40px;
   left:20px;
   width: 135px;
   height: 112px;
-  z-index: 2;
+  z-index: 20;
 }
 
-.hero-section span h3{
+.hero-section #span-text h3{
   position: relative;
   margin:0;
   color: var(--primary-color);
+  z-index: 10;
 }
 
-.hero-section span ul{
+.hero-section #span-text ul{
   padding:0;
   margin: 0;
   color: var(--primary-color);
+  z-index: 10;
 }
 
-.hero-section span ul li{
+.hero-section #span-text ul li{
   list-style: none;
   text-decoration: none;
   margin: 0;
   margin-top: .2rem;
   font-family: var(--font-1);
   font-weight: 500;
+  z-index: 10;
 }
 
-.hero-section span button{
+.hero-section #span-text button{
   background-color: var(--primary-color);
   color: var(--text-color);
   padding: .3rem .2rem;
   margin-top: .3rem;
   font-weight: 600;
   border-radius: 4px;
+  z-index: 10;
 }
 
  #overlay{
@@ -147,6 +151,7 @@ body{
   width: 135px;
   height: 125px;
   border-radius: 4px;
+  z-index: 10;
 }
 
 .main-section{
@@ -233,26 +238,26 @@ footer{
     padding: 1rem 1rem;
   }
 
-  .main-container h2{
+  .main-container h1{
     font-size: 2.3em;
   }
 
-  .hero-section span{
+  .hero-section #span-text{
     top:20%;
     left:10%;
     width:25%;
     height:40%;
   }
 
-  .hero-section span h3{
+  .hero-section #span-text h3{
     font-size: 1.8em;
   }
 
-  .hero-section span ul li{
+  .hero-section #span-text ul li{
     font-size: 1.5em;
   }
 
-  .hero-section span button{
+  .hero-section #span-text button{
     font-size: 1.5em;
   }
 
@@ -261,6 +266,7 @@ footer{
     left:10%;
     width:25%;
     height:40%;
+    z-index: 10;
   }
 
   .main-section{
