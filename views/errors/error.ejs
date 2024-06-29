@@ -1,0 +1,9 @@
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+        res.redirect('/')
+    } %>
+    
+    <!-- A Message Block -->
+    <%# messages() %>
+    <p>Oops! That page can't be found.</p>
